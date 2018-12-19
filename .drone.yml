@@ -41,7 +41,14 @@ steps:
   repo: godronex/drone
   dockerfile: Dockerfile.alpine
   secrets: [ docker_username, docker_password ]
-  tag: [ alpine ]
+  environment:
+    DOCKER_USERNAME:
+      from_secret: docker_username
+    DOCKER_PASSWORD:
+      from_secret: docker_password
+  settings:
+    tag: [ alpine ]
+    repo: godronex/agent
   when:
     branch: master
     event: push
@@ -102,7 +109,6 @@ steps:
 
 - name: publish_agent_amd64
   image: plugins/docker
-  repo: godronex/agent
   dockerfile: Dockerfile.agent
   secrets: [ docker_username, docker_password ]
   environment:
@@ -112,6 +118,7 @@ steps:
       from_secret: docker_password  
   settings:
     tag: [ latest ]
+    repo: godronex/agent
   when:
     branch: master
     event: push
