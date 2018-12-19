@@ -114,7 +114,7 @@ steps:
     branch: master
     event: push
 
-- name: release_server_alpine:
+- name: release_server_alpine
   image: plugins/docker
   repo: godronex/drone
   dockerfile: Dockerfile.alpine
