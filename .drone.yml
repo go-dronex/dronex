@@ -32,13 +32,13 @@ steps:
   image: golang:1.11
   commands: 
     - sh .drone.sh
-  secrets: [ ssh_key ]
+    - ls -al release/
   when:
     event: [ push, tag ]
 
 - name: publish_server_alpine
   image: plugins/docker
-  repo: drone/drone
+  repo: godronex/drone
   dockerfile: Dockerfile.alpine
   secrets: [ docker_username, docker_password ]
   tag: [ alpine ]
