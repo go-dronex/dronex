@@ -30,7 +30,8 @@ steps:
 
 - name: build
   image: golang:1.11
-  commands: sh .drone.sh
+  commands: 
+    - sh .drone.sh
   secrets: [ ssh_key ]
   when:
     event: [ push, tag ]
