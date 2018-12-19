@@ -49,7 +49,7 @@ pipeline:
 
   publish_server:
     image: plugins/docker
-    repo: drone/drone
+    repo: godronex/drone
     secrets: [ docker_username, docker_password ]
     tag: [ latest ]
     when:
@@ -58,7 +58,7 @@ pipeline:
 
   publish_agent_alpine:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent.alpine
     secrets: [ docker_username, docker_password ]
     tag: [ alpine ]
@@ -68,7 +68,7 @@ pipeline:
 
   publish_agent_arm:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent.linux.arm
     secrets: [ docker_username, docker_password ]
     tag: [ linux-arm ]
@@ -78,7 +78,7 @@ pipeline:
 
   publish_agent_arm64:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent.linux.arm64
     secrets: [ docker_username, docker_password ]
     tag: [ linux-arm64 ]
@@ -88,7 +88,7 @@ pipeline:
 
   publish_agent_amd64:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent
     secrets: [ docker_username, docker_password ]
     tag: [ latest ]
@@ -98,7 +98,7 @@ pipeline:
 
   release_server_alpine:
     image: plugins/docker
-    repo: drone/drone
+    repo: godronex/drone
     dockerfile: Dockerfile.alpine
     secrets: [ docker_username, docker_password ]
     tag: [ 0.8-alpine ]
@@ -107,7 +107,7 @@ pipeline:
 
   release_agent_alpine:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent.alpine
     secrets: [ docker_username, docker_password ]
     tag: [ 0.8-alpine ]
