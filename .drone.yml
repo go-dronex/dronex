@@ -12,19 +12,19 @@ steps:
     - go get -u github.com/golang/protobuf/protoc-gen-go
     - go test -cover $(go list ./... | grep -v /vendor/)
 
--name: test_postgres
+- name: test_postgres
   image: golang:1.11
   environment:
-    - DATABASE_DRIVER=postgres
-    - DATABASE_CONFIG=host=postgres user=postgres dbname=postgres sslmode=disable
+    DATABASE_DRIVER: postgres
+    DATABASE_CONFIG: host=postgres user=postgres dbname=postgres sslmode=disable
   commands:
     - go test github.com/go-dronex/dronex/store/datastore
 
--name: test_mysql
+- name: test_mysql
   image: golang:1.11
   environment:
-    - DATABASE_DRIVER=mysql
-    - DATABASE_CONFIG=root@tcp(mysql:3306)/test?parseTime=true
+    DATABASE_DRIVER: mysql
+    DATABASE_CONFIG: root@tcp(mysql:3306)/test?parseTime=true
   commands:
     - go test github.com/go-dronex/dronex/store/datastore
 
@@ -45,7 +45,7 @@ steps:
     branch: master
     event: push
 
--name: publish_server
+- name: publish_server
   image: plugins/docker
   repo: godronex/drone
   secrets: [ docker_username, docker_password ]
@@ -54,7 +54,7 @@ steps:
     branch: master
     event: push
 
--name: publish_agent_alpine
+- name: publish_agent_alpine
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent.alpine
@@ -84,7 +84,7 @@ steps:
     branch: master
     event: push
 
--name: publish_agent_arm64
+- name: publish_agent_arm64
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent.linux.arm64
@@ -99,7 +99,7 @@ steps:
     branch: master
     event: push
 
-  publish_agent_amd64:
+- name: publish_agent_amd64
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent
@@ -114,7 +114,7 @@ steps:
     branch: master
     event: push
 
-  release_server_alpine:
+- name: release_server_alpine:
   image: plugins/docker
   repo: godronex/drone
   dockerfile: Dockerfile.alpine
@@ -128,7 +128,7 @@ steps:
   when:
     event: tag
 
-  release_agent_alpine:
+- name: release_agent_alpine:
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent.alpine
@@ -142,7 +142,7 @@ steps:
   when:
     event: tag
 
-  release_server:
+- name: release_server:
   image: plugins/docker
   repo: godronex/dronex
   secrets: [ docker_username, docker_password ]
@@ -155,7 +155,7 @@ steps:
   when:
     event: tag
 
-  release_agent:
+- name: release_agent
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent
@@ -173,9 +173,9 @@ services:
 - name: postgres
   image: postgres:9.6
   environment:
-    POSTGRES_USER=postgres
+    POSTGRES_USER: postgres
 - name: mysql
   image: mysql:5.6.27
   environment:
-    MYSQL_DATABASE=test
-    MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    MYSQL_DATABASE: test
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
