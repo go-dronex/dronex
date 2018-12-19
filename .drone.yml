@@ -128,7 +128,7 @@ steps:
   when:
     event: tag
 
-- name: release_agent_alpine:
+- name: release_agent_alpine
   image: plugins/docker
   repo: godronex/agent
   dockerfile: Dockerfile.agent.alpine
@@ -142,7 +142,7 @@ steps:
   when:
     event: tag
 
-- name: release_server:
+- name: release_server
   image: plugins/docker
   repo: godronex/dronex
   secrets: [ docker_username, docker_password ]
