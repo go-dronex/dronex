@@ -17,7 +17,7 @@ package datastore
 import (
 	"testing"
 
-	"github.com/drone/drone/model"
+	"github.com/go-dronex/dronex/model"
 )
 
 func TestRegistryFind(t *testing.T) {

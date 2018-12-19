@@ -20,8 +20,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote/bitbucket/internal"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote/bitbucket/internal"
 
 	"golang.org/x/oauth2"
 )

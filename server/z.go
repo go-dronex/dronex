@@ -15,8 +15,8 @@
 package server
 
 import (
-	"github.com/drone/drone/store"
-	"github.com/drone/drone/version"
+	"github.com/go-dronex/dronex/store"
+	"github.com/go-dronex/dronex/version"
 	"github.com/gin-gonic/gin"
 )
 

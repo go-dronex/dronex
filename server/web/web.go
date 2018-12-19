@@ -25,9 +25,9 @@ import (
 	"time"
 
 	"github.com/drone/drone-ui/dist"
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/shared/token"
-	"github.com/drone/drone/version"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/shared/token"
+	"github.com/go-dronex/dronex/version"
 
 	"github.com/dimfeld/httptreemux"
 )

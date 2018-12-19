@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/drone/drone/model"
+	"github.com/go-dronex/dronex/model"
 
 	"github.com/google/go-github/github"
 )

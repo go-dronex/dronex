@@ -26,7 +26,7 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/drone/drone/model"
+	"github.com/go-dronex/dronex/model"
 	"github.com/mrjones/oauth"
 )
 

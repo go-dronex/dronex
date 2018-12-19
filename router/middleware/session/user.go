@@ -17,9 +17,9 @@ package session
 import (
 	"net/http"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/shared/token"
-	"github.com/drone/drone/store"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/shared/token"
+	"github.com/go-dronex/dronex/store"
 
 	"github.com/gin-gonic/gin"
 )

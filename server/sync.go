@@ -17,9 +17,9 @@ package server
 import (
 	"time"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote"
-	"github.com/drone/drone/store"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote"
+	"github.com/go-dronex/dronex/store"
 )
 
 // Syncer synces the user repository and permissions.

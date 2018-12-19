@@ -21,8 +21,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/securecookie"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/store"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/store"
 )
 
 func GetUsers(c *gin.Context) {

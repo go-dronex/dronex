@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote/gitlab/testdata"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote/gitlab/testdata"
 	"github.com/franela/goblin"
 )
 

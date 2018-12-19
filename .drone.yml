@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/drone/drone
+  path: src/github.com/go-dronex/dronex
 
 pipeline:
   test:
@@ -15,23 +15,23 @@ pipeline:
       - go test -cover $(go list ./... | grep -v /vendor/)
 
   test_postgres:
-    image: golang:1.8
+    image: golang:1.11
     environment:
       - DATABASE_DRIVER=postgres
       - DATABASE_CONFIG=host=postgres user=postgres dbname=postgres sslmode=disable
     commands:
-      - go test github.com/drone/drone/store/datastore
+      - go test github.com/go-dronex/dronex/store/datastore
 
   test_mysql:
-    image: golang:1.8
+    image: golang:1.11
     environment:
       - DATABASE_DRIVER=mysql
       - DATABASE_CONFIG=root@tcp(mysql:3306)/test?parseTime=true
     commands:
-      - go test github.com/drone/drone/store/datastore
+      - go test github.com/go-dronex/dronex/store/datastore
 
   build:
-    image: golang:1.8
+    image: golang:1.11
     commands: sh .drone.sh
     secrets: [ ssh_key ]
     when:
@@ -116,18 +116,18 @@ pipeline:
 
   release_server:
     image: plugins/docker
-    repo: drone/drone
+    repo: godronex/dronex
     secrets: [ docker_username, docker_password ]
-    tag: [ 0.8, 0.8.9 ]
+    tag: [ 0.9, 0.9.1 ]
     when:
       event: tag
 
   release_agent:
     image: plugins/docker
-    repo: drone/agent
+    repo: godronex/agent
     dockerfile: Dockerfile.agent
     secrets: [ docker_username, docker_password ]
-    tag: [ 0.8, 0.8.9 ]
+    tag: [ 0.9, 0.9.1 ]
     when:
       event: tag
 

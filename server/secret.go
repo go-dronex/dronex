@@ -17,8 +17,8 @@ package server
 import (
 	"net/http"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/router/middleware/session"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/router/middleware/session"
 
 	"github.com/gin-gonic/gin"
 )

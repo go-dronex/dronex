@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drone/drone/version"
+	"github.com/go-dronex/dronex/version"
 	"github.com/urfave/cli"
 )
 

@@ -19,8 +19,8 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/store/datastore/sql"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/store/datastore/sql"
 
 	"github.com/russross/meddler"
 )

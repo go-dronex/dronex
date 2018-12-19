@@ -19,7 +19,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/drone/drone/remote/bitbucket/fixtures"
+	"github.com/go-dronex/dronex/remote/bitbucket/fixtures"
 
 	"github.com/franela/goblin"
 )

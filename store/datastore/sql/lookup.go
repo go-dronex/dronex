@@ -15,9 +15,9 @@
 package sql
 
 import (
-	"github.com/drone/drone/store/datastore/sql/mysql"
-	"github.com/drone/drone/store/datastore/sql/postgres"
-	"github.com/drone/drone/store/datastore/sql/sqlite"
+	"github.com/go-dronex/dronex/store/datastore/sql/mysql"
+	"github.com/go-dronex/dronex/store/datastore/sql/postgres"
+	"github.com/go-dronex/dronex/store/datastore/sql/sqlite"
 )
 
 // Supported database drivers

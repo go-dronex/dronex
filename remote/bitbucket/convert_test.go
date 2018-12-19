@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote/bitbucket/internal"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote/bitbucket/internal"
 
 	"github.com/franela/goblin"
 	"golang.org/x/oauth2"

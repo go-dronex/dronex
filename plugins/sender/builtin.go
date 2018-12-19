@@ -1,7 +1,7 @@
 package sender
 
 import (
-	"github.com/drone/drone/model"
+	"github.com/go-dronex/dronex/model"
 )
 
 type builtin struct {

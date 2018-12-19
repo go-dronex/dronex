@@ -20,10 +20,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote"
-	"github.com/drone/drone/remote/coding/internal"
-	"github.com/drone/drone/shared/httputil"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote"
+	"github.com/go-dronex/dronex/remote/coding/internal"
+	"github.com/go-dronex/dronex/shared/httputil"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"

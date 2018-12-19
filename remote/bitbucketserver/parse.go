@@ -17,8 +17,8 @@ package bitbucketserver
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/drone/drone/model"
-	"github.com/drone/drone/remote/bitbucketserver/internal"
+	"github.com/go-dronex/dronex/model"
+	"github.com/go-dronex/dronex/remote/bitbucketserver/internal"
 	"net/http"
 )
 
