@@ -33,7 +33,7 @@ func WithAuth(method string) Opts {
 	}
 }
 
-// WithKubernetes returns an options that sets
+// WithKubernetesAuth returns an options that sets
 // kubernetes-auth parameters required to retrieve
 // an initial vault token
 func WithKubernetesAuth(addr, role, mount string) Opts {
