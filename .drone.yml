@@ -49,6 +49,7 @@ steps:
   settings:
     tag: [ alpine ]
     repo: godronex/agent
+    secrets: [ docker_username, docker_password ]
   when:
     branch: master
     event: push
